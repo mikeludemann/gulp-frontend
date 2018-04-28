@@ -125,7 +125,7 @@ gulp.task('bs', function() {
 
 // Execute Tasks
 gulp.task("default", gulp.parallel('scripts', 'styles', 'images', 'watch'));
-gulp.task("minify", gulp.parallel('html-minify',))
+gulp.task("minify", gulp.parallel('html-minify'))
 gulp.task("style_precompiler", gulp.parallel('sass', 'less', 'stylus'));
 gulp.task("script_precompiler", gulp.parallel('coffee'));
-gulp.task("server", gulp.parallel('server', 'bs'));
+gulp.task("server", gulp.parallel('bs'));
