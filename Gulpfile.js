@@ -19,13 +19,9 @@ var browsersync = require('browser-sync').create();
 // Coffeescript Task
 gulp.task('coffee', function () {
     gulp.src('src/script/coffee/*.coffee')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
         .pipe(coffee({
             bare: true
         }))
-        .pipe(plumber.stop())
         .pipe(gulp.dest('src/script/'));
 });
 
